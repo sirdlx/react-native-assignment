@@ -1,9 +1,11 @@
 import Joi from 'joi';
 import Boom from 'boom';
 
-import { delay } from './utils';
-import { createMockDb } from './db';
-import mockShifts from './mockShifts';
+import { delay } from './utils.js';
+import { createMockDb } from './db.js';
+import mockShifts from './mockShifts.js';
+
+export default {}
 
 const db = createMockDb({ shifts: mockShifts });
 

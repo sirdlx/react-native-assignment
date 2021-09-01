@@ -1,11 +1,12 @@
-import uuid from 'uuid/v4';
+
+import uuid  from 'uuid';
 import { DateTime } from 'luxon';
 
 const shiftTime = (dateObj, shiftDays = 0) =>
   DateTime.fromObject(dateObj).plus({ days: shiftDays }).valueOf();
 
 const createMockShift = (values) => Object.assign({
-  id: uuid(),
+  id: uuid.v4(),
   booked: false,
 }, values);
 

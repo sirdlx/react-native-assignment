@@ -1,4 +1,5 @@
 import Hapi from 'hapi';
+import * as mock from './shifts-mock-api/index.js';
 
 const server = new Hapi.Server({
   host: '127.0.0.1',
@@ -10,7 +11,7 @@ const server = new Hapi.Server({
 
 async function main() {
   await server.register([{
-    plugin: require('./shifts-mock-api'),
+    plugin: mock,
     routes: { prefix: '/shifts' },
   }]);
 
