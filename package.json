@@ -5,17 +5,23 @@
   "author": "Wolt",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon ./api/server.js --exec babel-node"
+    "expo": "expo start rn-shifts-snap-finance",
+    "start_old": "nodemon ./api/server.js --exec babel-node",
+    "start": "expo start rn-shifts-snap-finance & nodemon ./api/server.js",
+    "server": "nodemon ./api/server.js"
   },
   "type": "module",
   "dependencies": {
+    
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "boom": "^7.2.0",
+    "expo": "^1.0.0",
     "hapi": "^17.5.4",
     "joi": "^13.6.0",
     "luxon": "^1.3.3",
-    "nodemon": "^1.18.4",
+    "nodemon": "^2.0.12",
+    
     "uuid": "^3.4.0"
   },
   "babel": {
